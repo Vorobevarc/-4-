@@ -19,21 +19,32 @@ namespace WindowsFormsApp2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            textBox4.Text = "";
-            textBox5.Text = "";
+            textBox4.Text = "13";
+            textBox5.Text = "3";
+            textBox9.Text = "";
+            textBox10.Text = "23";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             int p = int.Parse(textBox4.Text);
-            textBox6.Text += Environment.NewLine +"p = " + p.ToString();
-            int q = int.Parse(textBox5.Text);
-            textBox6.Text += Environment.NewLine + "q = " + q.ToString();
+            int P = int.Parse(textBox4.Text);
+            int q = int.Parse(textBox5.Text);;
             int n = Math.Abs(p * q);
             textBox8.Text += Environment.NewLine + n.ToString();
             int fi = Math.Abs((p - 1) * (q - 1));
-            textBox6.Text += Environment.NewLine + "fi = " + fi.ToString();
-            
+            textBox7.Text += Environment.NewLine + fi.ToString();
+            int E = int.Parse(textBox9.Text);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int E = int.Parse(textBox9.Text);
+            int p = int.Parse(textBox4.Text);
+            int q = int.Parse(textBox5.Text);
+            int fi = Math.Abs((p - 1) * (q - 1));
+            int d = ((1 % fi) / E);
+            textBox7.Text += Environment.NewLine + d.ToString();
         }
     }
 }
